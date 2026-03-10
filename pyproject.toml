@@ -1,0 +1,25 @@
+[project]
+name = "blender-cli"
+version = "0.1.0"
+description = "CLI tool to control a running Blender instance via JSON-RPC over TCP"
+requires-python = ">=3.11"
+
+[project.scripts]
+blender-cli = "blender_cli.cli.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[dependency-groups]
+dev = [
+    "fake-bpy-module-latest",
+    "pytest",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/blender_cli"]

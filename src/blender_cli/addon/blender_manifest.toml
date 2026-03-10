@@ -1,0 +1,11 @@
+schema_version = "1.0.0"
+
+id = "blender_cli"
+version = "0.1.0"
+name = "Blender CLI Server"
+tagline = "JSON-RPC server for CLI control of Blender"
+maintainer = "HALBY"
+type = "add-on"
+
+license = ["SPDX:MIT"]
+blender_version_min = "5.0.0"
